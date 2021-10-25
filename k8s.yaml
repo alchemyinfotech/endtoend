@@ -54,5 +54,7 @@ spec:
       paths:
       - path: /spring-boot-demo
         backend:
-          serviceName: spring-boot-demo
-          servicePort: 8080
+            service:
+              name: spring-boot-demo
+              port:
+                number: 60000

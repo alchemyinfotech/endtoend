@@ -53,6 +53,7 @@ spec:
   - http:
       paths:
       - path: /spring-boot-demo
+        pathType: ImplementationSpecific
         backend:
             service:
               name: spring-boot-demo

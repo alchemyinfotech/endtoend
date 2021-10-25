@@ -41,21 +41,3 @@ spec:
   type: LoadBalancer
 status:
   loadBalancer: {}
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: spring-boot-demo
-  annotations:
-    nginx.ingress.kubernetes.io/ssl-redirect: \"false\"
-spec:
-  rules:
-  - http:
-      paths:
-      - path: /spring-boot-demo
-        pathType: ImplementationSpecific
-        backend:
-            service:
-              name: spring-boot-demo
-              port:
-                number: 60000
